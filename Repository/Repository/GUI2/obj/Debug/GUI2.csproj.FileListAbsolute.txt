@@ -1,0 +1,5 @@
+C:\Users\Weiheng\Desktop\proj4\caonima\687proj3mide\687proj3\GUI2\bin\Debug\GUI2.exe.config
+C:\Users\Weiheng\Desktop\proj4\caonima\687proj3mide\687proj3\GUI2\bin\Debug\GUI2.exe
+C:\Users\Weiheng\Desktop\proj4\caonima\687proj3mide\687proj3\GUI2\bin\Debug\GUI2.pdb
+C:\Users\Weiheng\Desktop\proj4\caonima\687proj3mide\687proj3\GUI2\bin\Debug\Translater.dll
+C:\Users\Weiheng\Desktop\proj4\caonima\687proj3mide\687proj3\GUI2\bin\Debug\Translater.pdb

@@ -1,0 +1,51 @@
+
+                                      CodeAnalysis - Version 1.4
+    ==============================================================================================
+     Sat Apr 28 13:22:05 2018
+     Path: "C:\Users\Weiheng\Desktop\proj4\caonima\687proj3\ServerPrototype"
+     Args: ServerPrototype.h, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1      28
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+         ServerPrototype.h   namespace                         Repository      47     134      27
+              public data: const SearchPath storageRoot = "../Storage" ; 
+              public data: const MsgPassingCommunication :: EndPoint serverEndPoint ( "localhost" , 8080 ) ; 
+         ServerPrototype.h       class                             Server      62      32      26
+         ServerPrototype.h    function                            version      73       2       1
+         ServerPrototype.h    function                            version      74       2       1
+         ServerPrototype.h    function                            version      75       2       1
+         ServerPrototype.h    function                            DbCore1      77       2       1
+         ServerPrototype.h    function                            DbCore1      78       2       1
+         ServerPrototype.h    function                            DbCore1      79       2       1
+         ServerPrototype.h    function                            checked      81       2       1
+         ServerPrototype.h    function                            checked      82       2       1
+         ServerPrototype.h    function                            checked      83       2       1
+         ServerPrototype.h    function                             Server      95       2       1
+         ServerPrototype.h    function                              start     101       3       1
+         ServerPrototype.h    function                               stop     107       5       1
+         ServerPrototype.h    function                        postMessage     115       3       1
+         ServerPrototype.h    function                         getMessage     121       4       1
+         ServerPrototype.h    function                         addMsgProc     128       3       1
+         ServerPrototype.h    function                    processMessages     134      46      10
+         ServerPrototype.h    function                                  ]     136      39       9
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+              public data: ServerPrototype.h : 57 - namespace Repository
+                const SearchPath storageRoot = "../Storage" ; 
+              public data: ServerPrototype.h : 58 - namespace Repository
+                const MsgPassingCommunication :: EndPoint serverEndPoint ( "localhost" , 8080 ) ; 
+
+
+    searched     3 dirs
+   processed     1 files

@@ -1,0 +1,171 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="410" Width="639" Padding="20" FontFamily="tahoma" Background="#ccc" Loaded="Window_Loaded" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="_settings">
+                <MenuItem Header="_Save" />
+
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_howtouse" />
+            </MenuItem>
+        </Menu>
+
+        <TabControl Grid.Row="1" Name="tabControl">
+            <TabItem Header="Check-In" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="check in files to the repository "/>
+                    <Button Grid.Row="0" Grid.Column="3" Margin="5" Content="checkin" Width="100" Click="checkin_click"/>
+                    <Button Grid.Row="0" Grid.Column="2" Margin="165,5,23,5" Content="showfile" Click="showfile_Click" RenderTransformOrigin="0.34,0.556"/>
+
+                    <Label Grid.Row="1" Grid.ColumnSpan="4" Content="select file need to be check in     select children here                                 input the author name here    "/>
+
+                    <ListBox Grid.Row="2" Grid.ColumnSpan="2" Name="checkinfiles" Margin="5,4.8,54.2,4.6" SelectionMode="Single"  />
+                    <ListBox Grid.Row="2" Grid.ColumnSpan="2" Name="checkindependency" Margin="10.2,4.8,114,4.6" SelectionMode="Multiple"  Grid.Column="1" />
+
+
+
+                    <TextBox Grid.Row="1" Grid.Column="2" Text="Weiheng" Name="author" Margin="179.8,23.8,10.4,226.2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                    <TextBlock Grid.Row="2" Grid.Column="2" Text="in put namespace name here" Name="showinputauthor" Margin="179.8,40.8,10.4,197.8" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
+
+
+
+                    <TextBox Grid.Column="2" Text="test" Name="ns" Margin="179.8,62.8,10.4,162.8" Grid.Row="2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
+
+                    <TextBox Grid.Column="2" Text="catagary1" Name="cate" Margin="179.8,133.8,10.4,87.8" Grid.Row="2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
+                    <TextBlock Grid.Column="2" Text="input catagary here" Name="showcata" Margin="179.8,103.8,10.4,131.8" Grid.Row="2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
+                    <TextBox Grid.Column="2" Text="description1" Name="descrip" Margin="179.8,213.8,10.4,9.8" Grid.Row="2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
+                    <TextBlock Grid.Column="2" Text="input description here" Name="showdescrip" Margin="179.8,178.8,10.4,52.8" Grid.Row="2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Check-Out">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="check out files to the repository "/>
+                    <Button Grid.Row="0" Grid.Column="2" Margin="5" Content="checkout" Width="100" Click="checkout_Click" />
+                    <Button Grid.Row="0" Grid.Column="1" Margin="211,5,10,5" Content="show files in repo" Click="showrepo_Click" />
+
+                    <Label Grid.Row="1" Grid.ColumnSpan="3" Content="select file need to be checkout      "/>
+
+                    <ListBox Grid.Row="2" Grid.ColumnSpan="2" Name="checkoutfiles" Margin="5,5,140,5" SelectionMode="Single"/>
+
+
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Browse">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="search by file name"/>
+                    <Button Grid.Row="0" Grid.Column="2" Margin="5" Content="search" Width="100" Click="search_Click" />
+                    <TextBox Grid.Row="0" Grid.Column="1" Name="query"  Margin="10.4,5,228,5"  />
+                    <Button Grid.Row="0" Grid.Column="1" Margin="243,5,10,5" Content="show file with no parent" Click="filewithnoparent_Click" />
+                    <Label Grid.Row="1" Grid.ColumnSpan="3" Content="double click to show metadata and file content"/>
+
+                    <ListBox Grid.Row="2" Grid.ColumnSpan="2" Name="browsequery" Margin="5,5,347,0" MouseDoubleClick="browse_MouseDoubleClick" SelectionMode="Single"  />
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="datatime" Margin="60,22,159,209" />
+                    <TextBlock Grid.Row="2" Grid.Column="1" Text="description" Name="descriptshow" Margin="243,0,10,239" Grid.ColumnSpan="2" />
+                    <TextBlock Grid.Row="2" Grid.Column="1" Text="datatime" Name="datatimeshow" Margin="60,0,164,239" />
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="name" Margin="60,82,164,157" />
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="nameshow" Margin="60,57,159,179" Text="filename" />
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="broauthor" Margin="60,136,164,91" />
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="authorshow" Margin="60,109,164,125" Text="author"/>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="cateshow" Margin="60,175,164,62" Text="category"/>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="descript" Margin="244.4,22,10.4,194.2" Grid.ColumnSpan="2" />
+                    <ListBox Grid.Row="2" Grid.Column="1"  Grid.ColumnSpan="2" Name="depencies" Margin="243.4,109,5.4,-0.2" />
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="depenciesshow" Margin="243.4,62,5.4,169.2" Text="depencies" Grid.ColumnSpan="2"/>
+                    <ListBox Grid.Row="2" Grid.Column="1" Name="categoriesshow" Margin="60,204,164,0" />
+
+
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="modify metadata">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ListBox Grid.Column="2" Grid.Row="2" Name="adddependencies" SelectionMode="Multiple" />
+                    <TextBox Grid.Column="2" Grid.Row="3" Name="description" Text="test descript" Margin="160.4,0,0.4,82.8" RenderTransformOrigin="0.5,0.5"/>
+                    <TextBlock Grid.Column="2" Grid.Row="3" Name="modifydescription" Text="       input descript here" Margin="0.4,5,152.4,67.8" RenderTransformOrigin="0.5,0.5"/>
+                    <TextBlock Grid.Column="2" Grid.Row="3" Name="modifycatagary" Text="       input catagary here" Margin="0.4,82,152.4,-1.2" RenderTransformOrigin="0.5,0.5" />
+                    <TextBox Grid.Column="1" Grid.Row="3" Name="authorname" Text="weiheng" Margin="150,95,312.4,-3.2" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
+                    <TextBlock Grid.Column="1" Grid.Row="3" Name="checkauthor" Text="input author name" Margin="0,95,163.6,9.8" RenderTransformOrigin="0.5,0.5"/>
+                    <TextBox Grid.Column="2" Grid.Row="3"  Name="catagary" Text="testcatagary" Margin="160.4,81,0.4,-0.2" RenderTransformOrigin="0.5,0.5"/>
+
+                    <Label Grid.Column="1" Grid.Row="1" Content="select file you want to modify here"/>
+                    <Label Grid.Column="2" Grid.Row="1" Content="select dependencies here"/>
+                    <ListBox Grid.Column="1" Grid.Row="2" Name="notclosedfiles" SelectionMode="Single"/>
+                    <Button Grid.Column="1" Grid.Row="3" Name="showfilesnotclosed" Content="showfiles" Margin="0,0,163.6,82.8" Click="showfilesnotclosed_Click"/>
+                    <Button Grid.Column="1" Grid.Row="3" Name="closestatus" Content="close" Grid.ColumnSpan="2" Margin="150,0,312.4,82.8" Click="closestatus_Click"/>
+                    <Button Grid.Column="1" Grid.Row="3" Name="modify" Content="modify" Grid.ColumnSpan="2" Margin="0,62,312.4,49.8" Click="modify_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <StatusBar Grid.Row="2">
+            <TextBlock Name="statusBarText" Text="This is a status bar"/>
+        </StatusBar>
+    </Grid>
+</Window>
+
+

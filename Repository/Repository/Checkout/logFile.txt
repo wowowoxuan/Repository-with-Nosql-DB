@@ -1,0 +1,31 @@
+
+                                      CodeAnalysis - Version 1.4
+    ==============================================================================================
+     Sat Apr 28 13:02:36 2018
+     Path: "C:\Users\Weiheng\Desktop\proj4\caonima\687proj3\Checkout"
+     Args: Download.h, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                Download.h   namespace                     Repositorycore      28      12       2
+                Download.h       class                           download      29       8       1
+              public data: std :: string downloadfile ( NoSqlDb :: DbCore < NoSqlDb :: PayLoad > & db , std :: string filename ) ; 
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+              public data: Download.h : 33 - class download
+                std :: string downloadfile ( NoSqlDb :: DbCore < NoSqlDb :: PayLoad > & db , std :: string filename ) ; 
+
+
+    searched     3 dirs
+   processed     1 files

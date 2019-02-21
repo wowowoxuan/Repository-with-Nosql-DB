@@ -1,0 +1,5 @@
+C:\Users\Weiheng\Desktop\proj4\687proj3\GUI\obj\Release\CodePopUp.g.cs
+C:\Users\Weiheng\Desktop\proj4\687proj3\GUI\obj\Release\MainWindow.g.cs
+C:\Users\Weiheng\Desktop\proj4\687proj3\GUI\obj\Release\App.g.cs
+C:\Users\Weiheng\Desktop\proj4\687proj3\GUI\obj\Release\WpfApp1_MarkupCompile.cache
+C:\Users\Weiheng\Desktop\proj4\687proj3\GUI\obj\Release\WpfApp1_MarkupCompile.lref

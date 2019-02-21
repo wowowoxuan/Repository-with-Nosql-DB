@@ -1,0 +1,31 @@
+
+                                      CodeAnalysis - Version 1.4
+    ==============================================================================================
+     Sat Apr 28 13:22:58 2018
+     Path: "C:\Users\Weiheng\Desktop\proj4\caonima\687proj3\Upload"
+     Args: Upload.h, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                  Upload.h   namespace                     Repositorycore      26      12       2
+                  Upload.h       class                             upload      27       7       1
+              public data: std :: string uploaddb ( NoSqlDb :: DbCore < NoSqlDb :: PayLoad > & db , std :: unordered_map < std :: string , int > & version , std :: string filename , std :: string ns , std :: string author ) ; 
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+              public data: Upload.h : 31 - class upload
+                std :: string uploaddb ( NoSqlDb :: DbCore < NoSqlDb :: PayLoad > & db , std :: unordered_map < std :: string , int > & version , std :: string filename , std :: string ns , std :: string author ) ; 
+
+
+    searched     3 dirs
+   processed     1 files
